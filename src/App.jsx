@@ -1,12 +1,19 @@
-// import { useState } from 'react'
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+//# PAGES
+import Homepage from "./pages/Homepage";
+import About from "./pages/About";
+import PostsList from "./pages/PostsList";
 
 function App() {
   return (
-    <>
-      <div className="container">
-        <h1 className="mt-5">Hello World</h1>
-      </div>
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route index Component={Homepage} />
+        <Route path="/chiSiamo" Component={About} />
+        <Route path="/postsList" Component={PostsList} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
