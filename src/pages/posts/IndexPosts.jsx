@@ -41,9 +41,17 @@ export default function IndexPosts() {
           <tbody>
             {posts.map((post) => (
               <tr key={post.id}>
-                <th>./img/ciambellone.jpeg</th>
-                <td scope="row">ciambellone</td>
-                <td>"zucchero a velo", "farina", "uova", "lievito"</td>
+                <th>
+                  <img src={apiUrl + post.img} width="50" />
+                </th>
+                <td>{post.title}</td>
+                <td>
+                  {post.tags.map((ingredient, index) => (
+                    <span key={index} className="badge text-bg-secondary ms-2">
+                      {ingredient}
+                    </span>
+                  ))}
+                </td>
                 <td></td>
               </tr>
             ))}
