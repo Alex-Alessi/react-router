@@ -7,6 +7,9 @@ import DefaultLayout from "./layouts/DefaultLayout";
 import Homepage from "./pages/Homepage";
 import About from "./pages/About";
 import PostsList from "./pages/PostsList";
+import ShowPosts from "./pages/posts/ShowPosts";
+import DeletePosts from "./pages/posts/DeletePosts";
+import IndexPosts from "./pages/posts/IndexPosts";
 
 function App() {
   return (
