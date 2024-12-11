@@ -5,7 +5,7 @@ export default function Navbar() {
     <nav className="navbar navbar-expand-lg bg-body-tertiary">
       <div className="container-fluid">
         <a className="navbar-brand" href="#">
-          React-router
+          {import.meta.env.VITE_APP_NAME || "React App"}
         </a>
         <button
           className="navbar-toggler"
@@ -31,8 +31,8 @@ export default function Navbar() {
               </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink className="nav-link" to="/postsList">
-                Posts List
+              <NavLink className="nav-link" to="/posts">
+                Posts
               </NavLink>
             </li>
           </ul>
