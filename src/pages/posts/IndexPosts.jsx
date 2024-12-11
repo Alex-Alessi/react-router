@@ -1,6 +1,13 @@
+import { useState } from "react";
+
 export default function IndexPosts() {
   const apiUrl = import.meta.env.VITE_API_URL;
-  console.log("apiUrl", apiUrl);
+  //   console.log("apiUrl", apiUrl);
+  fetch(apiUrl + "/posts")
+    .then((res) => res.json())
+    .then((data) => {
+      console.log(data);
+    });
 
   return (
     <div className="container">
