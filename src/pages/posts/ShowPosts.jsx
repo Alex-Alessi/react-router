@@ -1,3 +1,7 @@
 export default function ShowPosts() {
-  return <h1>post</h1>;
+  return (
+    <div className="container">
+      <h1>Dettaglio post</h1>
+    </div>
+  );
 }
