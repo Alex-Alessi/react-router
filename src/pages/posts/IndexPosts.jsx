@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-
+import { Link } from "react-router-dom";
 export default function IndexPosts() {
   const [posts, setPost] = useState([]);
   const apiUrl = import.meta.env.VITE_API_URL;
@@ -74,6 +74,7 @@ export default function IndexPosts() {
                     ))}
                   </td>
                   <td>
+                    {/* DELETE BUTTON */}
                     <button
                       type="button"
                       className="btn btn-danger"
@@ -83,9 +84,14 @@ export default function IndexPosts() {
                       <i className="fa-solid fa-trash"></i>
                     </button>
 
-                    <button type="button" className="btn btn-info ms-2">
+                    {/* SHOW BUTTON */}
+                    <Link
+                      to={`/posts/${post.id}`}
+                      type="button"
+                      className="btn btn-info ms-2"
+                    >
                       <i className="fa-solid fa-eye fa-sm"></i>
-                    </button>
+                    </Link>
                   </td>
                 </tr>
               ))}
